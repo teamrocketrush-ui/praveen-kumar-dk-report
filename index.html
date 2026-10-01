@@ -218,10 +218,11 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:
   </div>
   <div class="m-topbar-row2">
     <select class="m-period-select" id="mPeriodSelect" onchange="switchMonth(this.value)">
-      <option value="all">📊 All Months — Combined View</option>
+      <option value="sep" selected>📅 September 2026 (Sep 1 – Sep 30)</option>
+          <option value="all">📊 All Months — Combined View</option>
       <option value="jun">📅 June 2026 (Jun 1 – Jun 30)</option>
       <option value="jul">📅 July 2026 (Jul 1 – Jul 31, 2026)</option>
-      <option value="aug" selected>📅 August 2026 (Aug 1 – Aug 31)</option>
+      <option value="aug">📅 August 2026 (Aug 1 – Aug 31)</option>
     </select>
   </div>
 </div>
@@ -239,10 +240,11 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:
     <div class="period-wrap">
       <span class="period-label">Report Period</span>
       <select class="period-select" id="desktopPeriodSelect" onchange="switchMonth(this.value)">
-        <option value="all">📊 All Months</option>
+        <option value="sep" selected>📅 September 2026 (Sep 1 – Sep 30)</option>
+          <option value="all">📊 All Months</option>
         <option value="jun">📅 June 2026 (Jun 1 – Jun 30)</option>
         <option value="jul">📅 July 2026 (Jul 1 – Jul 31, 2026)</option>
-      <option value="aug" selected>📅 August 2026 (Aug 1 – Aug 31)</option>
+      <option value="aug">📅 August 2026 (Aug 1 – Aug 31)</option>
     </select>
     </div>
     <nav class="sidebar-nav">
@@ -289,8 +291,8 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:
       <div class="hb-top">
         <div class="hb-left">
           <div class="hb-eyebrow">Total Followers</div>
-                    <div class="hb-number">13,047</div>
-          <div class="hb-sub">As of <span id="followersAsOf">Aug 31, 2026</span></div>
+                    <div class="hb-number">13,166</div>
+          <div class="hb-sub">As of <span id="followersAsOf">Sep 30, 2026</span></div>
         </div>
         <div class="hb-stats">
           <div class="hb-stat"><div class="hb-stat-label">Impressions</div><div class="hb-stat-val" id="bImp">—</div><div class="hb-stat-sub" id="bImpS">—</div></div>
@@ -346,6 +348,39 @@ body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:
 // DATA — injected by Claude when building
 // ═══════════════════════════════════════
 const MONTHS = {
+  sep: {
+    label: "September 2026",
+    range: "Sep 1 – Sep 30, 2026",
+    labels: ["9/1", "9/2", "9/3", "9/4", "9/5", "9/6", "9/7", "9/8", "9/9", "9/10", "9/11", "9/12", "9/13", "9/14", "9/15", "9/16", "9/17", "9/18", "9/19", "9/20", "9/21", "9/22", "9/23", "9/24", "9/25", "9/26", "9/27", "9/28", "9/29", "9/30"],
+    impressions: [151, 111, 155, 77, 34, 48, 46, 1140, 442, 162, 125, 52, 70, 180, 407, 277, 692, 509, 671, 366, 853, 198, 133, 132, 410, 102, 44, 94, 280, 104],
+    engagements: [7, 0, 9, 0, 0, 2, 0, 34, 11, 5, 5, 4, 2, 6, 8, 9, 19, 7, 30, 8, 28, 5, 2, 2, 27, 3, 0, 6, 28, 5],
+    followers: [3, 1, 5, 2, 0, 0, 0, 0, 0, 7, 1, 1, 1, 1, 1, 13, 4, 2, 5, 1, 1, 17, 12, 14, 11, 1, 4, 12, 10, 4],
+    totalImp: 8065,
+    totalEng: 272,
+    totalFol: 134,
+    peakDay: "Sep 8",
+    peakVal: "1,140",
+    impTagClass: "gray",
+    impTagText: "📊 Steady month",
+    followersAsOf: "Sep 30, 2026",
+    audience: {
+      locations: [{name:"Greater Bengaluru Area", pct:37}, {name:"Greater Delhi Area", pct:9}, {name:"Mumbai Metropolitan Region", pct:6}, {name:"London Area, United Kingdom", pct:6}, {name:"Greater Hyderabad Area", pct:5}, {name:"Greater Chennai Area", pct:2}],
+      seniority: [{name:"Senior", pct:30, color:"#6366F1"}, {name:"Director", pct:12, color:"#8B5CF6"}, {name:"Entry", pct:11, color:"#A78BFA"}, {name:"CXO", pct:10, color:"#C4B5FD"}, {name:"Owner", pct:9, color:"#DDD6FE"}, {name:"Manager", pct:8, color:"#EDE9FE"}],
+      industries: [{name:"IT Services and IT Consulting", pct:21}, {name:"Technology, Information and Internet", pct:8}, {name:"Software Development", pct:7}, {name:"Human Resources Services", pct:6}, {name:"Financial Services", pct:5}, {name:"Staffing and Recruiting", pct:5}]
+    },
+    posts: [
+      {title:"Praveenkumardk_10 Hours Sourcing 5 Hours Screening 3 Hours", date:"Sep 17, 2026", imp:"1,617", badge:"gray", url:"https://www.linkedin.com/posts/praveenkumardk_10-hours-sourcing-5-hours-screening-3-hours-share-7506213402726264832-8w-3"},
+      {title:"Praveenkumardk_this Friday We Are Heading To Chennai For", date:"Sep 8, 2026", imp:"1,176", badge:"gray", url:"https://www.linkedin.com/posts/praveenkumardk_this-friday-we-are-heading-to-chennai-for-share-7503035519187140608-VtLd"},
+      {title:"Praveenkumardk_i Am Excited To Be Part Of The...", date:"Sep 19, 2026", imp:"908", badge:"gray", url:"https://www.linkedin.com/posts/praveenkumardk_i-am-excited-to-be-part-of-the-indian-business-share-7506941223606173696-R4eu"},
+      {title:"Praveenkumardk_the Next 5 Lakh Gcc Jobs Will Come...", date:"Sep 8, 2026", imp:"899", badge:"gray", url:"https://www.linkedin.com/posts/praveenkumardk_the-next-5-lakh-gcc-jobs-will-come-from-functions-share-7502943539354595328-9BWg"},
+      {title:"Praveenkumardk_privacy By Design 2026 Ugcpost 7505626151764193280 Ywl4", date:"Sep 15, 2026", imp:"859", badge:"gray", url:"https://www.linkedin.com/posts/praveenkumardk_privacy-by-design-2026-ugcPost-7505626151764193280-ywL4"},
+      {title:"Praveenkumardk_a 1000 Person Gcc Can Redraw A City...", date:"Sep 21, 2026", imp:"761", badge:"gray", url:"https://www.linkedin.com/posts/praveenkumardk_a-1000-person-gcc-can-redraw-a-city-map-share-7507648451875233793-c8f5"},
+      {title:"Praveenkumardk_three Days Into The Nasscom Business Delegation Ugcpost...", date:"Sep 25, 2026", imp:"488", badge:"gray", url:"https://www.linkedin.com/posts/praveenkumardk_three-days-into-the-nasscom-business-delegation-ugcPost-7509105439163240448-dqOo"},
+      {title:"Praveenkumardk_successfully Completed Days 34 Of The Ai Ugcpost...", date:"Sep 29, 2026", imp:"257", badge:"gray", url:"https://www.linkedin.com/posts/praveenkumardk_successfully-completed-days-34-of-the-ai-ugcPost-7510654043661234178-u-5C"},
+      {title:"Praveenkumardk_gccs Replaced Service Providers And Now", date:"Aug 31, 2026", imp:"245", badge:"gray", url:"https://www.linkedin.com/posts/praveenkumardk_gccs-replaced-service-providers-and-now-share-7500042340674428928-_u4_"},
+      {title:"Praveenkumardk_a Gen Alpha And A President On The...", date:"Aug 29, 2026", imp:"198", badge:"gray", url:"https://www.linkedin.com/posts/praveenkumardk_a-gen-alpha-and-a-president-on-the-same-panel-share-7499378462671941633-sGv6"}
+    ]
+  },
   aug: {
     label: "August 2026",
     range: "Aug 1 – Aug 31, 2026",
@@ -416,7 +451,7 @@ const MONTHS = {
     ]
   }
 };
-const DEFAULT_MONTH = 'aug';
+const DEFAULT_MONTH = 'sep';
 
 // ═══════════════════════════════════════
 // CHARTS
